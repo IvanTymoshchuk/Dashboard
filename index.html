@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://uicdn.toast.com/tui.pagination/latest/tui-pagination.css"
+    />
+    <script src="https://uicdn.toast.com/tui.pagination/latest/tui-pagination.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Responsive Dashboard</title>
+  </head>
+
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <a href="#" class="logo">
+        <svg width="37" height="37" class="bx bx-code-alt">
+          <use href="./images/symbol-defs.svg#icon-setting" />
+        </svg>
+        <div class="logo-name">Dashboard</div>
+      </a>
+      <ul class="side-menu">
+        <li>
+          <a href="#">
+            <svg width="24" height="24" class="bx bx-dashboard">
+              <use href="./images/symbol-defs.svg#icon-key" />
+            </svg>
+            Dashboard</a
+          >
+        </li>
+        <li>
+          <a href="#">
+            <svg width="24" height="24" class="bx bx-store-alt">
+              <use href="./images/symbol-defs.svg#icon-product" />
+            </svg>
+            Product</a
+          >
+        </li>
+        <li class="active">
+          <a href="#">
+            <svg width="24" height="24" class="bx bx-analyse">
+              <use href="./images/symbol-defs.svg#icon-user" />
+            </svg>
+            Custumers</a
+          >
+        </li>
+        <li>
+          <a href="#">
+            <svg width="24" height="24" class="bx bx-message-square-dots">
+              <use href="./images/symbol-defs.svg#icon-wallet" />
+            </svg>
+            Income</a
+          >
+        </li>
+        <li>
+          <a href="#">
+            <svg width="24" height="24" class="bx bx-group">
+              <use href="./images/symbol-defs.svg#icon-discount" />
+            </svg>
+            Promote</a
+          >
+        </li>
+        <li>
+          <a href="#">
+            <svg width="24" height="24" class="bx bx-cog">
+              <use href="./images/symbol-defs.svg#icon-message" />
+            </svg>
+            Help</a
+          >
+        </li>
+      </ul>
+
+      <ul class="user">
+        <li class="user_it">
+          <img src="images/evano.png" alt="evano" />
+        </li>
+        <li class="user_it">
+          <span class="user_name"
+            >Evano <br /><span class="user_title">Project Manager</span></span
+          >
+        </li>
+      </ul>
+    </div>
+    <!-- End of Sidebar -->
+
+    <!-- Main Content -->
+    <div class="content">
+      <!-- Navbar -->
+      <nav>
+        <i class="bx bx-menu"></i>
+        <form action="#">
+          <div class="form-input">
+            <input type="search" placeholder="Search..." class="input" />
+            <button class="search-btn" type="submit">
+              <i class="bx bx-search"></i>
+            </button>
+          </div>
+        </form>
+        <input type="checkbox" id="theme-toggle" hidden />
+        <label for="theme-toggle" class="theme-toggle"></label>
+      </nav>
+
+      <!-- End of Navbar -->
+
+      <main>
+        <div class="header">
+          <div class="left">
+            <h1>Hello Evano 👋🏼,</h1>
+          </div>
+        </div>
+
+        <div class="bottom-data">
+          <div class="orders">
+            <div class="header">
+              <i class="bx bx-receipt"></i>
+              <h3>All Customers</h3>
+
+              <div class="input-container">
+                <svg width="24" height="24" class="bx bx-search icon">
+                  <use href="./images/symbol-defs.svg#icon-search" />
+                </svg>
+                <input
+                  type="search"
+                  placeholder="Search..."
+                  class="input-sec"
+                />
+              </div>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Customer Name</th>
+                  <th>Company</th>
+                  <th>Phone Number</th>
+                  <th>Email</th>
+                  <th>Country</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody class="tbody"></tbody>
+            </table>
+            <!-- pagination -->
+            <div id="pagination" class="tui-pagination"></div>
+          </div>
+
+          
+        </div>
+      </main>
+    </div>
+
+    <script src="index.js"></script>
+    <script src="js/users.js"></script>
+  </body>
+</html>
